@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+    <link rel="stylesheet" href="{%static 'custom.css'%}">
+    <title>Description & FAQ</title>
+</head>
+
+<body style="background-color: #f7f7f7;">
+    <section class="card py-3 w-75 m-auto col-12">
+        <div class="navsubbar row w-100 px-3 m-auto d-flex justify-content-between ">
+            <div class="w-75  d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center justify-content-center ">
+                    <span class="navsubnumbers d-flex align-items-center justify-content-center">
+                        1
+                    </span>
+                    <span>
+                        <a href="#" class="px-2">Overview</a>
+                    </span>
+                    <span>
+                        <p class="m-0"><i class="arrow right"></i></p>
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <span class="navsubnumbers d-flex align-items-center justify-content-center">
+                        2
+                    </span>
+                    <span>
+                        <a href="#" class="px-2">Pricing</a>
+                    </span>
+                    <span>
+                        <p class="m-0"><i class="arrow right"></i></p>
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <span class="navsubnumbers d-flex align-items-center justify-content-center">
+                        3
+                    </span>
+                    <span>
+                        <a href="#" class="px-2">Description & FAQ</a>
+                    </span>
+                    <span>
+                        <p class="m-0"><i class="arrow right"></i></p>
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <span class="navsubnumbers d-flex align-items-center justify-content-center">
+                        4
+                    </span>
+                    <span>
+                        <a href="#" class="px-2">Requirements
+                        </a>
+                    </span>
+                    <span>
+                        <p class="m-0"><i class="arrow right"></i></p>
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <span class="navsubnumbers d-flex align-items-center justify-content-center">
+                        5
+                    </span>
+                    <span>
+                        <a href="#" class="px-2">Gallery</a>
+                    </span>
+                    <span>
+                        <p class="m-0"><i class="arrow right"></i></p>
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <span class="navsubnumbers d-flex align-items-center justify-content-center">
+                        6
+                    </span>
+                    <span>
+                        <a href="#" class="px-2">Publish</a>
+                    </span>
+                    <span>
+                        <p class="m-0"><i class="arrow right"></i></p>
+                    </span>
+                </div>
+            </div>
+            <div>
+                <a href="#">Send </a>
+            </div>
+        </div>
+    </section>
+    <section class="my_125">
+        <div class="py-4">
+            <div class="w-50 m-auto pricing_scope py-4  ">
+                <h1>Description</h1>
+            </div>
+            <h6 class="w-50 py-4 d-flex m-auto"> Briefly Describe Your Gig</h6>
+        </div>
+    </section>
+    <section>
+        <form action="" method="POST">
+
+            {% csrf_token %}
+            <div class="w-50 m-auto d-flex">
+                <textarea name="Description" id="Description" cols="30" rows="15" class="w-100 p-2"
+                    placeholder="Add your Description here" style="overflow-y: scroll; overflow-x: scroll;" name="gigdesc"></textarea>
+
+                <button type="submit" class="float-right p-3 border-0 my-3 bookbtn sellerbtn">
+                    Save & Continue</button>
+            </div>
+        </form>
+
+    </section>
+
+</body>
+
+</html>

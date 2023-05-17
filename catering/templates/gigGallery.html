@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+            />
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+            crossorigin="anonymous">
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'style.css'%}">
+        <link rel="stylesheet" href="{%static 'custom.css'%}">
+        <title>Gallery & Publish</title>
+    </head>
+
+    <body style="background-color: #f7f7f7;">
+        <section class="card py-3 w-75 m-auto">
+            <div class="navsubbar row w-100 px-3 m-auto d-flex
+                justify-content-between ">
+                <div class="w-75 d-flex align-items-center
+                    justify-content-between">
+                    <div class="d-flex align-items-center justify-content-center
+                        ">
+                        <span class="navsubnumbers d-flex align-items-center
+                            justify-content-center">
+                            1
+                        </span>
+                        <span>
+                            <a href="#" class="px-2">Overview</a>
+                        </span>
+                        <span>
+                            <p class="m-0"><i class="arrow right"></i></p>
+                        </span>
+                    </div>
+                    <div class="d-flex align-items-center
+                        justify-content-center">
+                        <span class="navsubnumbers d-flex align-items-center
+                            justify-content-center">
+                            2
+                        </span>
+                        <span>
+                            <a href="#" class="px-2">Pricing</a>
+                        </span>
+                        <span>
+                            <p class="m-0"><i class="arrow right"></i></p>
+                        </span>
+                    </div>
+                    <div class="d-flex align-items-center
+                        justify-content-center">
+                        <span class="navsubnumbers d-flex align-items-center
+                            justify-content-center">
+                            3
+                        </span>
+                        <span>
+                            <a href="#" class="px-2">Description</a>
+                        </span>
+                        <span>
+                            <p class="m-0"><i class="arrow right"></i></p>
+                        </span>
+                    </div>
+                    <div class="d-flex align-items-center
+                        justify-content-center">
+                        <span class="navsubnumbers d-flex align-items-center
+                            justify-content-center">
+                            5
+                        </span>
+                        <span>
+                            <a href="#" class="px-2">Gallery</a>
+                        </span>
+                        <span>
+                            <p class="m-0"><i class="arrow right"></i></p>
+                        </span>
+                    </div>
+                    <!-- <div class="d-flex align-items-center justify-content-center">
+                    <span class="navsubnumbers d-flex align-items-center justify-content-center">
+                        6
+                    </span>
+                    <span>
+                        <a href="#" class="px-2">Publish</a>
+                    </span>
+                    <span>
+                        <p class="m-0"><i class="arrow right"></i></p>
+                    </span>
+                </div> -->
+                </div>
+                <div>
+                    <a href="#">Send </a>
+                </div>
+            </div>
+        </section>
+        <form action="" method="POST" class="d-flex w-100 flex-wrap gridimages"
+            enctype="multipart/form-data">
+            {% csrf_token %}
+            <section class="container">
+                <div class="row col-12 d-flex p-0 flex-column pt-5">
+                    <h1>Showcase Your Services In A Gig Gallery</h1>
+                    <p>Encourage buyers to choose your Gig by featuring a
+                        variety of your work.</p>
+                    <h3>Images (up to 3)</h3>
+                    <p>Get noticed by the right buyers with visual examples of
+                        your services.</p>
+                </div>
+                <div class="row py-4">
+
+                    <!-- {{form}} -->
+                    <div class="GalleryImages d-flex justify-content-center
+                        align-items-center">
+                        <div class="d-flex align-items-center
+                            justify-content-center flex-column">
+                            <label for="file">
+                                <h6>Drag & Drop a Image or </h6>
+                            </label>
+                            <input id="file" type="file" name="gig1_image" />
+                        </div>
+                    </div>
+                    <div class="GalleryImages d-flex justify-content-center
+                        align-items-center">
+                        <div class="d-flex align-items-center
+                            justify-content-center flex-column">
+                            <label for="file">
+                                <h6>Place Your Image Here</h6>
+                            </label>
+                            <input id="file" type="file" name="gig2_image" />
+                        </div>
+                    </div>
+                    <div class="GalleryImages d-flex justify-content-center
+                        align-items-center">
+                        <div class="d-flex align-items-center
+                            justify-content-center flex-column">
+                            <label for="file">
+                                <h6>Place Your Image Here</h6>
+                            </label>
+                            <input id="file" type="file" name="gig3_image" />
+                        </div>
+                    </div>
+                    <div class="row col-12 d-flex p-0 flex-column pb-4">
+                        <h3>Video (One Only)</h3>
+                        <p>Capture buyer's attention with a video that showcases
+                            your services. <br> Please choose a video shorter
+                            than 75 seconds and smaller than 50MB</p>
+                    </div>
+                    <!-- <div class="row ">
+
+                        <div class="GalleryImages d-flex justify-content-center
+                            align-items-center">
+                            <div class="d-flex align-items-center
+                                justify-content-center flex-column">
+                                <label for="file">
+                                    <h6>Drag & Drop a Video or </h6>
+                                </label>
+                                 <video width="320" height="240" controls
+                                    name="vedio"> -->
+                                <!-- <button type="submit" class="btn"
+                                    name="gig_vedio">Upload</button>
+
+
+                            </div>
+                        </div>
+
+                        <hr style="border: 0.5px solid lightgray; width: 100%;"
+                            class="mt-5">
+                    </div>  -->
+
+
+                </div>
+            </section>
+            <!-- <section class="container">
+              
+            </section> -->
+            <section class="container w-100 pt-5">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 m-auto row w-100 publishmaindiv d-flex
+                    justify-content-center p-3">
+                    <div class="py-5 px-0 w-100 d-flex justify-content-center
+                        flex-column align-items-center">
+                        <div class="text-center">
+                            <img src="../Images/publish-removebg-preview.png"
+                                alt="">
+                        </div>
+                        <div class="py-3 px-0 d-flex justify-content-center
+                            flex-column align-items-center">
+                            <h3 class="text-center">You're almost there!</h3>
+                            <p>Let’s publish your Gig and get you ready to start
+                                selling.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="w-50 d-flex m-auto justify-content-end col-md-12 p-0
+                row">
+                <button type="submit" class="float-right p-3 border-0 my-3
+                    bookbtn sellerbtn">Publish</button>
+            </div>
+
+            <div class="col-md-1"></div>
+        </form>
+
+    </body>
+
+</html>

@@ -1,0 +1,785 @@
+* {
+  /* padding: 0px !important; */
+  /* margin: 0 auto !important; */
+  box-sizing: border-box;
+}
+
+/* body {
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+  background-color: #f0e0f4;
+
+} */
+
+.bg_input {
+  background-color: #f5f5f5;
+}
+
+.bg_submit {
+  background-color: #1dbf73 !important;
+  color: #fff;
+  /* font-size: 15px; */
+}
+
+.bg {
+  background-color: #f1f6ff;
+}
+
+.input_radius {
+  border-radius: 0px;
+}
+
+.form_margin_top {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.registration_seller_btn {
+  width: 170px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ff6b2c;
+  color: #ff6b2c;
+}
+
+.registration_S_B_Hover:hover {
+  cursor: pointer;
+  background-color: #1dbf73;
+  border: 0px;
+  color: #fff;
+}
+.logoimg{
+  width: 40%;
+}
+.logoimg img{
+  width: 100%;
+}
+.seller_icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff6b2c;
+  color: #fff;
+  border: 0px;
+}
+
+.icons_size {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.registration_S_B_Hover>.seller_buyer_icon:hover {
+  background-color: #fff;
+  color: #1dbf73;
+}
+
+.page_1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* background-color: #1dbf73; */
+  border: 1px solid lightgray;
+
+}
+
+.page_1>a {
+  font-size: 30px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: lightgray;
+}
+
+.checked {
+  background-color: #1dbf73;
+  border: none;
+}
+
+.page_lines {
+  width: 40px;
+  border: 0.1225rem solid black;
+}
+
+.next_btn {
+  background-color: #ff6b2c !important;
+  color: #fff !important;
+  border-radius: 0px;
+  font-size: 1.25rem;
+  border: none;
+}
+.next_btn:hover{
+  color: #fff !important;
+}
+
+.ddlborder {
+  border: 0.1rem solid lightgray;
+}
+
+.form-group a {
+  text-decoration: none;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+.row_width {
+  width: 90%;
+}
+
+a {
+  font-size: 20px;
+  color: #000 !important;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: #000 !important;
+}
+
+.main_heading {
+  font-size: 80px;
+  font-weight: bolder;
+}
+
+.heading_clr {
+  color: #ff6b2c;
+}
+/* .image_border{
+  border: 20px solid #fff;
+  border-radius: 50%;
+  height: 815px;
+  width: 815px;
+} */
+
+
+/* Search Bar */
+ .search{
+ position: relative;
+ /* box-shadow: 0 0 40px rgba(51, 51, 51, .1); */
+ }
+ .search input{
+  height: 80px;
+  text-indent: 25px;
+  /* border-radius: 10px; */
+ }
+ .search .fa-search{
+  position: absolute;
+  text-align: center;
+  rotate: 90deg;
+ }
+ .serchbtn{
+  font-size: 20px;
+  background-color: #ff6b2c !important;
+  color: #fff !important;
+ }
+ .search button{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 80px;
+  width: 100px;
+ }
+ hr {
+  border-top: 2px dashed #ff6b2c ;
+}
+.link_border_bottom{
+  border: 2px solid #fff ;
+width: 30%;  
+
+}
+
+
+
+/* // ........................ Fliping Cards//////////////// */
+
+
+.flip-card {
+  background-color: transparent;
+  width: 408px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    width: 100%;
+    height:132%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    position: absolute;
+  }
+  .flip-card-front{
+      height: fit-content;
+  }
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    /* background-color: #ffe9ed; */
+    /* background-color: #f0e0f4; */
+    background-color: #dbe3e6;
+    color: black;
+
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+      color: white;
+      background-color: #ff6b2c;
+  transform: rotateY(180deg);
+}
+.link_font_size
+{
+font-size: 23px !important;
+color: #fff !important;
+}
+
+.service_img img{
+  width: 80%;
+  height: 250px;
+}
+.sellerCard{
+  width: 32%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px #f8f8f8;
+  /* border: 1px solid red; */
+}
+.sellerserviceimg img{
+  width: 40px;
+  height: 40px;
+}
+.sellerserviceimg{
+  position: relative;
+  bottom: 240px;
+  left: 160px;
+}
+/* .SellerLocation{
+  position: relative;
+  bottom: 80px;
+  right: 115px;
+}
+.SellerLocation a{
+  background-color: #ff6b2c;
+} */
+
+.sellerProfile img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.checkedstars {
+  color: orange;
+}
+.bookbtn{
+  background-color: #ff6b2c;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
+  width: 35%;
+  cursor: pointer;
+}
+
+
+.whychoosing, .choosings_Services{
+  width: 47%;
+}
+.whychoosing h1{
+  font-size: 5rem;
+}
+.paraopacity{
+  opacity: .65;
+  font-size: 21px;
+}
+.servicesCardswidth{
+  width: 90%;
+  background-color: #f3f3ff;
+  border-radius: 10px;
+}
+.Services_cards{
+  width: 50%;
+}
+.cards_grid_gap{
+  grid-row-gap: 40px;
+}
+.servicesCardswidth h3:hover{
+  color: #ff6b2c;
+}
+.sellerprofileimg{
+  width: 130px;
+  background-color: #fff;
+  height: 130px;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+}
+.joinUs{
+  background-color: #f6f7fe;
+}
+.sellerbtn{
+  width: 28%;
+}
+.joinusheading h1{
+font-size: 4rem;
+font-weight: 700;
+line-height: 90px;
+}
+.joinusheading p{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+
+.footerSection{
+  background-color: #f0eaf1;
+}
+.footerlogopart{
+  width: 30%;
+}
+.arrowimg img{
+  width: 30px;
+  height: 30px;
+}
+.location p{
+  margin: 0px;
+}
+
+
+.sellersidebar{
+  width: 30%;
+  background-color: #fff;
+  /* border: 1px solid red; */
+  /* height: 200px; */
+}
+.sidebarimg img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.Sellersidegigs{
+  width: 65%;
+
+}
+.ActiveGigs span{
+  position: relative;
+width: 10%;
+left: 4px;
+height: 5px;
+border-bottom: 4px solid #1dbf73;  
+top: 18px;
+}
+.gigimage img{
+width: 100%;
+height: 150px;
+}
+.sellerAllGigs{
+grid-column-gap: 40px;
+grid-row-gap: 40px;
+}
+.row .card{
+  width: 50% !important;
+}
+.creategigdiv{
+padding: 80px;
+}
+.creategig{
+width: 100px;
+height: 100px;
+background-color: #ff6b2c;
+/* border: 1px solid red; */
+border-radius: 50%;
+cursor: pointer;
+}
+.creategig a h1{
+font-size: 50px;
+font-weight: bolder;
+color: #fff;
+}
+
+.creategigdiv{
+  width: 30%;
+}
+.navsubnumbers{
+width: 25px;
+height: 25px;
+background-color: #1dbf73;
+border-radius: 50%;
+font-weight: 700;
+/* border: 1px solid red; */
+}
+
+.arrow {
+border: solid black;
+border-width: 0 1px 1px 0;
+display: inline-block;
+padding: 3px;
+}
+
+.right {
+transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);
+}
+.navsubbar a{
+font-weight: 500;
+font-size: 15px;
+}
+.titleinput{
+font-weight: bolder;
+}
+.pricing_scope{
+border-bottom: 2px solid red;
+}
+
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 20px;
+}
+textarea {
+resize: none;
+}
+#tableheading:onclick {
+border: 0px;
+}
+.sellerProfile{
+width: 75%;
+}
+.dropdown_width{
+width: 75%;
+}
+.cards_padding{
+padding-bottom: 160% !important;
+}
+.flip_section{
+height: 350px;
+}
+.GalleryImages{
+text-align: center;
+flex-direction: column;
+align-items: center;
+width: 30%;
+height: 300px;
+border: 2px dotted lightgray;
+}
+.gridimages{
+grid-row-gap:50px;
+grid-column-gap:50px;
+
+}
+
+.GalleryImages img{
+width: 100px;
+height: 100px;
+opacity: .15;
+}
+
+
+input#file {
+  display: inline-block;
+  cursor: pointer;
+  padding: 120px 0 0 0;
+  height: 100px;
+  background: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png') center center no-repeat #f7f7f7;
+  border-radius: 20px;
+  background-size: 60px 60px;
+}
+
+.publishmaindiv{
+/* width: 100%; */
+/* height: 500px; */
+/* border: 1px solid red; */
+background-color: #fff;
+}
+.publishmaindiv img{
+width: 60%;
+}
+/* select.minimal {
+background-image:
+  linear-gradient(45deg, transparent 50%, gray 50%),
+  linear-gradient(135deg, gray 50%, transparent 50%),
+  linear-gradient(to right, #ccc, #ccc);
+background-position:
+  calc(100% - 20px) calc(1em + 2px),
+  calc(100% - 15px) calc(1em + 2px),
+  calc(100% - 2.5em) 0.5em;
+background-size:
+  5px 5px,
+  5px 5px,
+  1px 1.5em;
+background-repeat: no-repeat;
+}
+select.minimal:focus {
+background-image:
+  linear-gradient(45deg, green 50%, transparent 50%),
+  linear-gradient(135deg, transparent 50%, green 50%),
+  linear-gradient(to right, #ccc, #ccc);
+background-position:
+  calc(100% - 15px) 1em,
+  calc(100% - 20px) 1em,
+  calc(100% - 2.5em) 0.5em;
+background-size:
+  5px 5px,
+  5px 5px,
+  1px 1.5em;
+background-repeat: no-repeat;
+border-color: green;
+outline: 0;
+} */
+
+
+@media only screen and (max-width: 1600px) {
+.sellerCard .service_img img {
+  width: 89%;
+}
+.sellerCard .bookbtn{
+  width: 61%;
+}
+.flip-card{
+grid-row-gap: 130px;
+}
+.featured-head{
+padding-top: 500px!important;
+}
+.hero_contact{
+width: 78%;
+}
+.hero_img img{
+width: 600px!important;
+height: 550px;
+}
+.next_btn{
+margin-bottom:20px ;
+}
+.main_heading{
+font-size: 54px;
+}
+}
+@media only screen and (max-width: 1300px) {
+.responsive_card{
+  display: flex;
+  flex-direction: column;
+}
+.whychoosing{
+  width: 90%;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.choosings_Services{
+  width: 100%;
+}
+.Featured_services{
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+.Featured_services .card-gap{
+  grid-row-gap: 60px;
+}
+.Featured_services .sellerCard{
+  width: 48%;
+} 
+.footer_div{
+  flex-wrap: wrap;
+}
+.hero_img img{
+  width: 550px!important;
+  height: auto;
+}
+.main_heading{
+  font-size: 43px;
+}.flip-card{
+  width: 500px;
+}
+.flip_section{
+  height: 660px;
+}
+
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+.sellerCard .service_img img {
+  width: 100%;
+}
+.sellerCard .sellerProfile {
+  display: flex;
+ 
+}
+.row_width_card{
+  width: 53%!important;
+}
+.sellerCard .bookbtn{
+    width: 61%;
+}
+.featured-head{
+  padding-top: 800px!important;
+  /* width: 100%; */
+  /* margin: 0px; */
+}
+.flip-card{
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.main_hero{
+flex-wrap: wrap;
+flex-direction: column-reverse;
+/* width: 100%; */
+}
+.hero_contact{
+width: 100%;
+}
+.main_heading{
+text-align: center;
+font-size: 70px;  
+}
+.hero_pc_width{
+width: 100%;
+}
+.star_width{
+width: 50%;
+}
+}
+@media only screen and (max-width: 1215px) {
+/* .flip_section{
+height: 900px;
+}   */
+.flip-card{
+width: 400px !important;
+}
+}
+@media only screen and (max-width: 1000px) {
+.footerlogopart{
+width: 49%;
+}}
+@media only screen and (max-width: 1810px) {
+.flip_section{
+  height: 618px;
+}
+}
+@media only screen and (max-width: 1360px) {
+.flip-card{
+  width: 550px;
+}
+}
+@media only screen and (max-width: 750px) {
+.Featured_services .sellerCard{
+  width: 98%;
+} 
+.sellerCard .service_img img {
+  width: 95%;
+}
+.sellerCard .sellerProfile {
+  display: flex;
+  flex-direction: row;
+}
+.sellerbtn{
+  width: 61%!important;
+}
+.flip-card{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.flip_section{
+  height: 1217px;
+}
+}
+@media only screen and (max-width: 700px) {
+
+.whychoosing{
+  width: 100%;
+}
+.Services_cards{
+  width: 100%;
+}
+.footerlogopart{
+  width: 90%;
+}
+.hero_img img{
+  width: 300px!important;
+  height: auto;
+}
+.sellerProfile{
+  width: 94%;
+}
+}
+@media only screen and (max-width: 400px) {
+.hero_img img{
+  width: 100px!important;
+  height: auto;
+}
+.whychoosing h1{
+  font-size: 3rem !important;
+}
+.sellerbtn{
+  width: 61%!important;
+}
+.sellerProfile{
+  width: 98%;
+}
+
+}
+@media only screen and (max-width: 884px) and (min-width: 750px)  {
+.flip-card{
+width: 307px !important;
+}
+
+}
+@media only screen and (max-width: 600px) and (min-width: 500px)  {
+.sellerProfile{
+  width: 98%;
+}
+.sellerProfile .star_width{
+  width: 63%;
+}
+.hero_img img{
+  width: 400px !important;
+  height:400px !important;
+}
+.main_heading{
+  padding-top: 15px;
+}
+.hero_contact p{
+  text-align: center;
+}
+.dropdown_width{
+  width: 100%;
+}
+.slect_ddl{
+  padding-right: 0px;
+}
+.brows_font h1{
+  font-size: 25px;
+}
+.row_width_card{
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+}
+}

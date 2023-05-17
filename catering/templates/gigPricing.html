@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+    <link rel="stylesheet" href="{%static 'custom.css'%}">
+    <title>Gig Pricing</title>
+</head>
+
+<body style="background-color: #f7f7f7;">
+    <section class="card py-3 w-75 m-auto">
+        <div class="navsubbar row w-100 px-3 m-auto d-flex justify-content-between ">
+            <div class="w-75  d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center justify-content-center ">
+                    <span class="navsubnumbers d-flex align-items-center justify-content-center">
+                        1
+                    </span>
+                    <span>
+                        <a href="#" class="px-2">Overview</a>
+                    </span>
+                    <span>
+                        <p class="m-0"><i class="arrow right"></i></p>
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <span class="navsubnumbers d-flex align-items-center justify-content-center">
+                        2
+                    </span>
+                    <span>
+                        <a href="#" class="px-2">Pricing</a>
+                    </span>
+                    <span>
+                        <p class="m-0"><i class="arrow right"></i></p>
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <span class="navsubnumbers d-flex align-items-center justify-content-center">
+                        3
+                    </span>
+                    <span>
+                        <a href="#" class="px-2">Description & FAQ</a>
+                    </span>
+                    <span>
+                        <p class="m-0"><i class="arrow right"></i></p>
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <span class="navsubnumbers d-flex align-items-center justify-content-center">
+                        4
+                    </span>
+                    <span>
+                        <a href="#" class="px-2">Requirements
+                        </a>
+                    </span>
+                    <span>
+                        <p class="m-0"><i class="arrow right"></i></p>
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <span class="navsubnumbers d-flex align-items-center justify-content-center">
+                        5
+                    </span>
+                    <span>
+                        <a href="#" class="px-2">Gallery</a>
+                    </span>
+                    <span>
+                        <p class="m-0"><i class="arrow right"></i></p>
+                    </span>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <span class="navsubnumbers d-flex align-items-center justify-content-center">
+                        6
+                    </span>
+                    <span>
+                        <a href="#" class="px-2">Publish</a>
+                    </span>
+                    <span>
+                        <p class="m-0"><i class="arrow right"></i></p>
+                    </span>
+                </div>
+            </div>
+            <div>
+                <a href="#">Send </a>
+            </div>
+        </div>
+    </section>
+    <section class="my_125">
+        <div class="py-4">
+            <div class="w-50 m-auto pricing_scope py-4  ">
+                <h1>Scope & Pricing</h1>
+            </div>
+        </div>
+
+        <form action="" method="POST">
+
+            {% csrf_token %}
+            <div class=" w-50 align-items-center d-flex m-auto  py-4">
+                <div class="w-100" style="background-color: #fff;">
+                    <table>
+                        <tr>
+                            <th style="background-color: #fafafa;">Company</th>
+                            <th style="background-color: #f7f7f7;">BASIC</th>
+                            <th style="background-color: #f7f7f7;">STANDARD</th>
+                            <th style="background-color: #f7f7f7;">PREMIUM</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="background-color: #fafafa;">Package Detail</td>
+                            <td><textarea name="tableheading" placeholder="Name Your Package" class="w-100 border-0"
+                                    id="tableheading" name="packagenameb"></textarea></td>
+                            <td><textarea name="tableheading" rows="2" cols="50" placeholder="Name Your Package"
+                                    class="w-100 border-0" id="tableheading" name="packagenames"></textarea></td>
+                            <td><textarea name="tableheading" rows="2" cols="50" placeholder="Name Your Package"
+                                    class="w-100 border-0" id="tableheading" name="packagenamep"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><textarea name="tableheading" rows="3" cols="50"
+                                    placeholder="Describe the details of your offering" class="w-100 border-0 "
+                                    id="tableheading" name="packagedb"></textarea></td>
+                            <td><textarea name="tableheading" rows="3" cols="50"
+                                    placeholder="Describe the details of your offering" class="w-100 border-0"
+                                    id="tableheading" name="packageds"></textarea></td>
+                            <td><textarea name="tableheading" rows="3" cols="50"
+                                    placeholder="Describe the details of your offering" class="w-100 border-0"
+                                    id="tableheading" name="packagedp"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #fafafa;">Revisions</td>
+                            <td class="p-0">
+                                <select class="w-100 border-0 py-2 pl_20 pr_20" style="cursor: pointer;" name="packagerevisionsb">
+                                    <option value="Delivery Time">Delivery Time</option>
+                                    <option value="1 day Delivery">1 day Delivery</option>
+                                    <option value="2 days Delivery">2 days Delivery</option>
+                                    <option value="3 days Delivery">3 days Delivery</option>
+                                    <option value="4 days Delivery">4 days Delivery</option>
+                                    <option value="5 days Delivery">5 days Delivery</option>
+                                    <option value="6 days Delivery">6 days Delivery</option>
+                                    <option value="7 days Delivery">7 days Delivery</option>
+                                    <option value="10 days Delivery">10 days Delivery</option>
+                                    <option value="14 day Delivery">14 days Delivery</option>
+                                    <option value="21 days Delivery">21 days Delivery</option>
+                                    <option value="30 days Delivery">30 day Delivery</option>
+                                    <option value="45 days Delivery">45 days Delivery</option>
+                                    <option value="60 days Delivery">60 days Delivery</option>
+                                    <option value="75 days Delivery">75 days Delivery</option>
+                                    <option value="90 day Delivery">90 days Delivery</option>
+
+                                </select>
+                            </td>
+                            <td class="p-0">
+                                <select class="w-100 border-0 py-2 pl_20 pr_20" style="cursor: pointer;" name="packagerevisionss">
+                                    <option value="Delivery Time">Delivery Time</option>
+                                    <option value="1 day Delivery">1 day Delivery</option>
+                                    <option value="2 days Delivery">2 days Delivery</option>
+                                    <option value="3 days Delivery">3 days Delivery</option>
+                                    <option value="4 days Delivery">4 days Delivery</option>
+                                    <option value="5 days Delivery">5 days Delivery</option>
+                                    <option value="6 days Delivery">6 days Delivery</option>
+                                    <option value="7 days Delivery">7 days Delivery</option>
+                                    <option value="10 days Delivery">10 days Delivery</option>
+                                    <option value="14 day Delivery">14 days Delivery</option>
+                                    <option value="21 days Delivery">21 days Delivery</option>
+                                    <option value="30 days Delivery">30 day Delivery</option>
+                                    <option value="45 days Delivery">45 days Delivery</option>
+                                    <option value="60 days Delivery">60 days Delivery</option>
+                                    <option value="75 days Delivery">75 days Delivery</option>
+                                    <option value="90 day Delivery">90 days Delivery</option>
+
+                                </select>
+                            </td>
+                            <td class="p-0">
+                                <select class="w-100 border-0 py-2 pl_20 pr_20 minimal" style="cursor: pointer;" name="packagerevisionsp">
+                                    <option value="Delivery Time">Delivery Time</option>
+                                    <option value="1 day Delivery">1 day Delivery</option>
+                                    <option value="2 days Delivery">2 days Delivery</option>
+                                    <option value="3 days Delivery">3 days Delivery</option>
+                                    <option value="4 days Delivery">4 days Delivery</option>
+                                    <option value="5 days Delivery">5 days Delivery</option>
+                                    <option value="6 days Delivery">6 days Delivery</option>
+                                    <option value="7 days Delivery">7 days Delivery</option>
+                                    <option value="10 days Delivery">10 days Delivery</option>
+                                    <option value="14 day Delivery">14 days Delivery</option>
+                                    <option value="21 days Delivery">21 days Delivery</option>
+                                    <option value="30 days Delivery">30 day Delivery</option>
+                                    <option value="45 days Delivery">45 days Delivery</option>
+                                    <option value="60 days Delivery">60 days Delivery</option>
+                                    <option value="75 days Delivery">75 days Delivery</option>
+                                    <option value="90 day Delivery">90 days Delivery</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #fafafa;">Price</td>
+                            <td class="py-0">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="w-100"><input type="number" id="quantity" name="quantity" min="5"
+                                            step="5" max="10000" class="w-100 border-0 py-2" name="packagepriceb"> </div>
+                                    <div>$</div>
+                                </div>
+                            </td>
+                            <td class="py-0">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="w-100"><input type="number" id="quantity" name="quantity" min="5"
+                                            step="5" max="10000" class="w-100 border-0 py-2" name="packageprices"> </div>
+                                    <div>$</div>
+                                </div>
+                            </td>
+                            <td class="py-0">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="w-100"><input type="number" id="quantity" name="quantity" min="5"
+                                            step="5" max="10000" class="w-100 border-0 py-2" name="packagepricep"> </div>
+                                    <div>$</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="w-50 d-flex m-auto justify-content-end">
+
+                <button type="submit" class="float-right p-3 border-0 my-3 bookbtn sellerbtn" type="button">Save &
+                    Continue</button>
+            </div>
+
+        </form>
+    </section>
+</body>
+
+</html>

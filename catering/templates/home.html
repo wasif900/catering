@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+            />
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+            crossorigin="anonymous">
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'style.css'%}">
+        <link rel="stylesheet" href="{%static 'custom.css'%}">
+        <title>Login Page</title>
+
+
+    </head>
+
+    <body>
+
+        <div style="background-color: #f0e0f4;">
+            <div class="row row_width m-auto pb_50 pt_50">
+                <div class="navbar col-lg-12 p-0 ">
+                    <div class="col-lg-3 p-0">
+                        <div class="logoimg">
+                            <img
+                                src="static/Images/Ecatering-2_without_bg-removebg-preview.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex justify-content-around">
+                            <div class="p-3">
+                                <a href="#">Home</a>
+                            </div>
+                            <div class="p-3">
+                                <a href="#">About</a>
+                            </div>
+                            <div class="p-3">
+                                <select class="border-0"
+                                    style="background-color: #f0e0f4; cursor:
+                                    pointer; font-size: 20px;">
+                                    <option value="Service List">Service List</option>
+                                    <option value="Pakistan">Pakistan</option>
+                                    <option value="India">India</option>
+                                    <option value="Bangladesh">Bangladesh</option>
+                                    <option value="Iran">Iran</option>
+                                    <option value="Saudia Arabia">Saudia Arabia</option>
+                                </select>
+                            </div>
+                            <div class="p-3">
+                                <a href="#">Contact</a>
+                            </div>
+                        </div>
+                        <form action="/search" method="POST">
+                            {% csrf_token %}
+                            <div class="input-group">
+                                <div class="form-outline">
+                                    <input id="search" type="search"
+                                        id="form1" class="form-control"
+                                        placeholder="Search" name="search"/>
+                                </div>
+                                <button id="my-button" type="submit" class="btn
+                                    btn-primary">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <div class="float-right">
+
+                            {% if username == "none" %}
+                            <select class="border-0" style="background-color:
+                                #f0e0f4; cursor: pointer;">
+
+                                <option value="Account">Account</option>
+                                <option value="Signin">SignIn</option>
+                                <option value="SignUp">SignUp</option>
+                            </select>
+
+                            {% else %}
+                            <h4>welcome<h2></h2><h3>{{ username }}</h3>
+                                {% endif %}
+
+                            </div>
+                        </div>
+
+                        <div class="w-75 py-2">
+                            <button class="p-3 border-0 bookbtn"><a
+                                    href="logout">Book Now</a></button>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row row_width pb_70 pt_70 d-flex m-auto ">
+                    <div class="col-lg-12 my-5 d-flex flex-wrap p-0">
+                        <div class="">
+                            <div class="w-100 d-flex flex-column">
+                                <h1 class="main_heading">One-stop Solution for
+                                    <br>your<span class="heading_clr">
+                                        Services</span>
+                                </h1>
+                                <p class="my-5"><b>Order any service, anytime
+                                        from anywhere</b></p>
+                                <div class="w-75 d-flex justify-content-between
+                                    flex-wrap">
+                                    <div class="col-md-4 pl-0 ">
+                                        <label class="font-weight-bold">Service
+                                            Country</label>
+                                        <select id = "countrydrop"  class="border-0 w-100 p-3
+                                            ddlborder">
+                                            <option value="Pakistan">Pakistan</option>
+                                            <option value="India">India</option>
+                                            <option value="Bangladesh">Bangladesh</option>
+                                            <option value="Iran">Iran</option>
+                                            <option value="Saudia Arabia">Saudia
+                                                Arabia</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 pl-0 ">
+                                        <label class="font-weight-bold">Service
+                                            City</label>
+                                        <select id = "citydrop"  class="border-0 w-100 p-3
+                                            ddlborder">
+                                            <option value="Lahore">Lahore</option>
+                                            <option value="Jhang">Jhang</option>
+                                            <option value="Sargodha">Sargodha</option>
+                                            <option value="Pindi">Pindi</option>
+                                            <option value="DI Khan">DI Khan</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 pl-0 ">
+                                        <label class="font-weight-bold">Service
+                                            Area</label>
+                                        <select id = "areadrop"  class="border-0 w-100 p-3
+                                            ddlborder">
+                                            <option value="Sargodha">Sargodha</option>
+                                            <option value="Lahore">Lahore</option>
+                                            <option value="Jhang">Jhang</option>
+                                            <option value="Pindi">Pindi</option>
+                                            <option value="DI Khan">DI Khan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 my-4 p-0">
+                                    <div class="search">
+                                        <input  id = 'searchquery' type="text" class="form-control
+                                            border-0 p-0"
+                                            placeholder="What are you looking
+                                            for? ">
+                                        <button class="btn serchbtn d-flex
+                                            justify-content-center
+                                            align-items-center"
+                                            onclick="submitForm()"><i
+                                                class="fa fa-search"></i></button>
+                                    </div>
+
+                                </div>
+
+                                <label><b> Popular Services:</b></label>
+                                <div class="d-flex w-100 flex-wrap py-2
+                                    justify-content-between row_width">
+                                    <a href="#" class="btn pl_30 pr_30 pt_10
+                                        pb_10 next_btn">Catering</a>
+                                    <a href="#" class="btn pl_30 pr_30 pt_10
+                                        pb_10 next_btn">Tenting</a>
+                                    <a href="#" class="btn pl_30 pr_30 pt_10
+                                        pb_10 next_btn">Decoration</a>
+                                    <a href="#" class="btn pl_30 pr_30 pt_10
+                                        pb_10 next_btn">Sound System</a>
+                                    <a href="#" class="btn pl_30 pr_30 pt_10
+                                        pb_10 next_btn">Super
+                                        Stores</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex m-auto justify-content-center
+                            image_border">
+                            <img
+                                src="static/Images/portrait-handsome-bearded-man-chief-cook-holding-saucepan-make-okay-sign_496169-87.avif"
+                                alt="This is a hero image" style="border-radius:
+                                50%; width: 680px; height: 680px; ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center pt-4 pb_70">
+                <div class="row row_width">
+                    <div class="col-md-3">
+                        <h1>Browse Category</h1>
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2 d-flex align-items-center
+                        justify-content-end">
+                        <a href="#" class="float-right d-flex
+                            justify-content-center">Explore All &#8594</a>
+                    </div>
+                    <div class="col-lg-12 ">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-between m-auto row_width
+                flex-wrap">
+                <div class="row w-100 d-flex m-auto justify-content-between">
+                    <div class="flip-card border-0 ">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front p-3">
+                                <img
+                                    src="static/Images/cook-woman-making-sushi-rolls_1398-1682.avif"
+                                    alt="Avatar"
+                                    style="width:150px;height:150px;
+                                    border-radius: 50%;" class="py-2 ">
+                                <h3 class="pt-2">John Doe</h3>
+                                <p>Architect & Engineer</p>
+                            </div>
+                            <div class="flip-card-back flex-column d-flex
+                                align-items-center justify-content-center p-4">
+                                <a href="#" class="py-2 link_font_size"> See
+                                    More Detail &#8594 </a>
+                                <hr class="link_border_bottom py-0 m-1">
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Inventore, praesentium?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card border-0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front p-3">
+                                <img
+                                    src="static/Images/cook-woman-making-sushi-rolls_1398-1682.avif"
+                                    alt="Avatar"
+                                    style="width:150px;height:150px;
+                                    border-radius: 50%;" class="py-2">
+                                <h3 class="pt-2">John Doe</h3>
+                                <p>Architect & Engineer</p>
+                            </div>
+                            <div class="flip-card-back flex-column d-flex
+                                align-items-center justify-content-center p-4">
+                                <a href="#" class="py-2 link_font_size"> See
+                                    More Detail &#8594 </a>
+                                <hr class="link_border_bottom py-0 m-1">
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Inventore, praesentium?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card border-0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front p-3">
+                                <img
+                                    src="static/Images/cook-woman-making-sushi-rolls_1398-1682.avif"
+                                    alt="Avatar"
+                                    style="width:150px;height:150px;
+                                    border-radius: 50%;" class="py-2">
+                                <h3 class="pt-2">John Doe</h3>
+                                <p>Architect & Engineer</p>
+                            </div>
+                            <div class="flip-card-back flex-column d-flex
+                                align-items-center justify-content-center p-4">
+                                <a href="#" class="py-2 link_font_size"> See
+                                    More Detail &#8594 </a>
+                                <hr class="link_border_bottom py-0 m-1">
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Inventore, praesentium?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row_width m-auto ">
+                <div class="row d-flex justify-content-center pt_150 pb_70">
+                    <div class="col-md-3">
+                        <h1>Featured Services</h1>
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2 d-flex align-items-center
+                        justify-content-end">
+                        <a href="#" class="float-right d-flex
+                            justify-content-center">Explore All &#8594</a>
+                    </div>
+                    <div class="col-lg-12 ">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="section m-auto col-lg-12 row_width">
+                <div class="row d-flex justify-content-between">
+                    <div class="sellerCard">
+                        <div class="service_img d-flex flex-column
+                            justify-content-center align-items-center">
+                            <img
+                                src="static/Images/front-close-view-beautiful-confused-waitress-woman-butterfly-neck-pointing-something-right-side-red-background_140725-146518.avif"
+                                alt="">
+                            <div>
+                                <a href="#"><i class="sellerserviceimg"><img
+                                            src="static/Images/1000_F_109403029_961IdSXmUGSUKdCK5ghFxtZABFRlPvVP-removebg-preview.png"
+                                            alt=""></i></a>
+                            </div>
+                            <div class="sellerProfile d-flex align-items-center
+                                justify-content-between w-75">
+                                <div class="d-flex align-items-center">
+                                    <a href="#"><img
+                                            src="static/Images/20220928_223836.jpg"
+                                            alt=""></a>
+                                    <a href="#" class="px-3">Hasnain Ahmad</a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <span class="fa fa-star checkedstars"></span>
+                                        <span class="fa fa-star checkedstars"></span>
+                                        <span class="fa fa-star checkedstars"></span>
+                                        <span class="fa fa-star checkedstars"></span>
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="w-75 py-2"><a href="#"><b> Catgering
+                                        Service within that city and From One
+                                        City to
+                                        Another City as well</b></a></h3>
+                            <p class="w-75 pb-4">It is a long established fact
+                                that a reader will be distracted by the readable
+                                content of a page whe..</p>
+                            <h3 class="w-75"><b> $21.00</b></h3>
+                            <div class="w-75 py-2">
+                                <button class="p-3 border-0 bookbtn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sellerCard">
+                        <div class="service_img d-flex flex-column
+                            justify-content-center align-items-center">
+                            <img
+                                src="static/Images/front-view-female-cook-white-cook-suit-posing-green-surface_140725-31252.avif"
+                                alt="">
+                            <div>
+                                <a href="#"><i class="sellerserviceimg"><img
+                                            src="static/Images/1000_F_109403029_961IdSXmUGSUKdCK5ghFxtZABFRlPvVP-removebg-preview.png"
+                                            alt=""></i></a>
+                            </div>
+                            <div class="sellerProfile d-flex align-items-center
+                                justify-content-between w-75">
+                                <div class="d-flex align-items-center">
+                                    <a href="#"><img
+                                            src="static/Images/20220928_223836.jpg"
+                                            alt=""></a>
+                                    <a href="#" class="px-3">Hasnain Ahmad</a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <span class="fa fa-star checkedstars"></span>
+                                        <span class="fa fa-star checkedstars"></span>
+                                        <span class="fa fa-star checkedstars"></span>
+                                        <span class="fa fa-star checkedstars"></span>
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="w-75 py-2"><a href="#"><b> Catgering
+                                        Service within that city and From One
+                                        City to
+                                        Another City as well</b></a></h3>
+                            <p class="w-75 pb-4">It is a long established fact
+                                that a reader will be distracted by the readable
+                                content of a page whe..</p>
+                            <h3 class="w-75"><b> $21.00</b></h3>
+                            <div class="w-75 py-2">
+                                <button class="p-3 border-0 bookbtn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sellerCard">
+                        <div class="service_img d-flex flex-column
+                            justify-content-center align-items-center">
+                            <img
+                                src="static/Images/front-view-female-cook-white-cook-suit-posing-green-surface_140725-31252.avif"
+                                alt="">
+                            <div>
+                                <a href="#"><i class="sellerserviceimg"><img
+                                            src="static/Images/1000_F_109403029_961IdSXmUGSUKdCK5ghFxtZABFRlPvVP-removebg-preview.png"
+                                            alt=""></i></a>
+                            </div>
+                            <div class="sellerProfile d-flex align-items-center
+                                justify-content-between w-75">
+                                <div class="d-flex align-items-center">
+                                    <a href="#"><img
+                                            src="static/Images/20220928_223836.jpg"
+                                            alt=""></a>
+                                    <a href="#" class="px-3">Hasnain Ahmad</a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <span class="fa fa-star checkedstars"></span>
+                                        <span class="fa fa-star checkedstars"></span>
+                                        <span class="fa fa-star checkedstars"></span>
+                                        <span class="fa fa-star checkedstars"></span>
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="w-75 py-2"><a href="#"><b> Catgering
+                                        Service within that city and From One
+                                        City to
+                                        Another City as well</b></a></h3>
+                            <p class="w-75 pb-4">It is a long established fact
+                                that a reader will be distracted by the readable
+                                content of a page whe..</p>
+                            <h3 class="w-75"><b> $21.00</b></h3>
+                            <div class="w-75 py-2">
+                                <button class="p-3 border-0 bookbtn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="row_width m-auto pt_150 pb_150">
+                <div class="row d-flex m-auto justify-content-between">
+                    <div class="whychoosing d-flex justify-content-center
+                        flex-column">
+                        <h1>Why you ChooseThis Marketplace?</h1>
+                        <p class="py-5 paraopacity"><b> Lorem ipsum dolor sit
+                                amet, consectetur adipiscing elit. Nunc in
+                                rutrum
+                                odio, a blandit leo. Mauris
+                                placerat vulputate lacus eu eleifend. Donec
+                                euismod, metus id consequat egestas, tellus dui
+                                fermentum est, id porttitor tellus tortor in
+                                tellus. Maecenas non facilisis tortor. Duis et
+                                euismod
+                                augue.</b></p>
+                        <div class="w-75 py-2">
+                            <button class="p-3 border-0 bookbtn sellerbtn"> Join
+                                As Seller</button>
+                        </div>
+                    </div>
+                    <div class="choosings_Services d-flex w-50 flex-wrap
+                        cards_grid_gap ">
+                        <div class="Services_cards ">
+                            <div
+                                class="p-3 servicesCardswidth m-auto d-flex
+                                justify-content-center align-items-center
+                                flex-column">
+                                <div class="sellerprofileimg d-flex
+                                    align-items-center
+                                    justify-content-center">
+                                    <img
+                                        src="static/Images/stack-business-hands-team-together-hand-drawn-doodle-cartoon-vector-illustration-109958816.jpg"
+                                        alt="Avatar"
+                                        style="width:100px;height:100px;
+                                        border-radius: 50%;" class="py-2 ">
+                                </div>
+                                <h3 class="pt-4 pb-4">Service Commitment</h3>
+                                <p class="text-center">It is a long established
+                                    fact that a reader will be distracted by the
+                                    readable. It is a long established fact that
+                                    a reader.</p>
+                            </div>
+
+                        </div>
+                        <div class="Services_cards">
+                            <div
+                                class="p-3 servicesCardswidth m-auto d-flex
+                                justify-content-center align-items-center
+                                flex-column">
+                                <div class="sellerprofileimg d-flex
+                                    align-items-center
+                                    justify-content-center">
+                                    <img src="static/Images/m21641985855.png"
+                                        alt="Avatar"
+                                        style="width:100px;height:100px;
+                                        border-radius: 50%;" class="py-2 ">
+                                </div>
+                                <h3 class="pt-4 pb-4">Super Experience</h3>
+                                <p class="text-center">It is a long established
+                                    fact that a reader will be distracted by the
+                                    readable. It is a long established fact that
+                                    a reader.</p>
+                            </div>
+                        </div>
+                        <div class="Services_cards">
+
+                            <div
+                                class="p-3 servicesCardswidth m-auto d-flex
+                                justify-content-center align-items-center
+                                flex-column">
+                                <div class="sellerprofileimg d-flex
+                                    align-items-center
+                                    justify-content-center">
+                                    <img src="static/Images/m31641985855.png"
+                                        alt="Avatar"
+                                        style="width:100px;height:100px;
+                                        border-radius: 50%;" class="py-2 ">
+                                </div>
+                                <h3 class="pt-4 pb-4">Secure Data & Payment</h3>
+                                <p class="text-center">It is a long established
+                                    fact that a reader will be distracted by the
+                                    readable. It is a long established fact that
+                                    a reader.</p>
+                            </div>
+                        </div>
+                        <div class="Services_cards">
+                            <div
+                                class="p-3 servicesCardswidth m-auto d-flex
+                                justify-content-center align-items-center
+                                flex-column">
+                                <div class="sellerprofileimg d-flex
+                                    align-items-center
+                                    justify-content-center">
+                                    <img src="static/Images/m41641985855.png"
+                                        alt="Avatar"
+                                        style="width:100px;height:100px;
+                                        border-radius: 50%;" class="py-2 ">
+                                </div>
+                                <h3 class="pt-4 pb-4">Dedecated Support</h3>
+                                <p class="text-center">It is a long established
+                                    fact that a reader will be distracted by the
+                                    readable. It is a long established fact that
+                                    a reader.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="row joinUs pt_70 pb_70 m-auto">
+                <div class="joinusheading d-flex align-items-center
+                    justify-content-center flex-column m-auto">
+                    <h1 class="text-center">Join with us to Sale your service
+                        <br> & growth your Experience</h1>
+                    <p class="pt-5 pb-3 paraopacity">Order any service, anytime
+                        from anywhere</p>
+                    <div class="w-75 py-2 text-center">
+                        <button class="p-3 border-0 bookbtn sellerbtn"> Join As
+                            Seller</button>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="w-100 footerSection mt-5">
+                <div class="row_width d-flex m-auto justify-content-between py-5
+                    ">
+                    <div class="footerlogopart pr-5">
+                        <div class="py-5">
+                            <img src="static/Images/logo-021644225302.png"
+                                alt="">
+                        </div>
+                        <p class="paraopacity">It is a long established fact
+                            that a reader will be distracted by the readable
+                            content of a page when looking at its layout. The
+                            point of using Lorem Ipsum is that it has a
+                            more-or-less.</p>
+                    </div>
+                    <div class="footerlogopart">
+                        <div class="py-5">
+                            <h3>Community</h3>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="arrowimg ">
+                                <img
+                                    src="static/Images/next-removebg-preview.png"
+                                    alt="">
+                            </span>
+                            <span class="px-4">
+                                <a href="sellergig">Become A Seller</a>
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center py-3">
+                            <span class="arrowimg ">
+                                <img
+                                    src="static/Images/next-removebg-preview.png"
+                                    alt="">
+                            </span>
+                            <span class="px-4">
+                                <a href="RegisterPage1.html">Become A Buyer</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="footerlogopart">
+                        <div class="py-5">
+                            <h3>Category</h3>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <span class="arrowimg ">
+                                <img
+                                    src="static/Images/next-removebg-preview.png"
+                                    alt="">
+                            </span>
+                            <span class="px-4">
+                                <a href="#">Catering</a>
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <span class="arrowimg ">
+                                <img
+                                    src="static/Images/next-removebg-preview.png"
+                                    alt="">
+                            </span>
+                            <span class="px-4">
+                                <a href="#">Tenting</a>
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <span class="arrowimg ">
+                                <img
+                                    src="static/Images/next-removebg-preview.png"
+                                    alt="">
+                            </span>
+                            <span class="px-4">
+                                <a href="#">Decoration</a>
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <span class="arrowimg ">
+                                <img
+                                    src="static/Images/next-removebg-preview.png"
+                                    alt="">
+                            </span>
+                            <span class="px-4">
+                                <a href="#">Sound System</a>
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <span class="arrowimg ">
+                                <img
+                                    src="static/Images/next-removebg-preview.png"
+                                    alt="">
+                            </span>
+                            <span class="px-4">
+                                <a href="#">Super Stores</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="footerlogopart">
+                        <div class="py-5">
+                            <h3>Contact Info</h3>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <span class="arrowimg ">
+                                <img src="static/Images/pin.png" alt="">
+                            </span>
+                            <span class="px-4 location">
+                                <h6> District TalaGang ,VPO Wanhar</h6>
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <span class="arrowimg ">
+                                <img src="static/Images/smartphone-call.png"
+                                    alt="">
+                            </span>
+                            <span class="px-4">
+                                <h6>+923477670800</h6>
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <span class="arrowimg ">
+                                <img src="static/Images/email.png" alt="">
+                            </span>
+                            <span class="px-4">
+                                <h6>hasnain2721@gmail.com</h6>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </span>
+                            <span>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </span>
+                            <span>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </span>
+                            <span>
+                                <a href="#" class="fa fa-youtube"></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="py-2">
+                <div class="footerline row_width d-flex justify-content-between
+                    m-auto">
+                    <div class="d-flex align-items-center">
+                        <a href="#">Privacy Policy</a> &nbsp; | &nbsp; <a
+                            href="#">Terms & Conditions</a>
+                    </div>
+                    <div>
+                        <p>All copyright © 2023 Reserved</p>
+                    </div>
+
+                </div>
+            </footer>
+            <!-- <script src="S+Jquery/bootstrap.min.js"></script>
+            <script> -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+           function submitForm() {
+            var selectedValuecountry= $('#countrydrop').val();
+            var selectedValuecity = $('#citydrop').val();
+            var selectedValuearea = $('#areadrop').val();
+            var searchquery = $('#searchquery').val();
+            console.log(selectedValuearea)
+
+            $.ajax({
+            type: 'POST',
+            url: "{% url 'searchPage' %}",
+            data: {
+                'country': selectedValuecountry,
+                'city': selectedValuecity,
+                'area': selectedValuearea,
+                'searchquery' : searchquery,
+                'csrfmiddlewaretoken': '{{ csrf_token }}'
+            },
+            success: function(response) {
+                // Handle the response or perform any necessary actions
+                // e.g., redirect to the desired page
+                window.location.href = "{% url 'search' %}";
+            },
+            error: function(xhr, errmsg, err) {
+                // Handle the error
+            }
+        });
+    }
+</script>
+
+
+            // document.getElementById('my-button').addEventListener('click',
+            function() {
+            // let q = document.getElementById('search-input').value
+            // console.log(q)
+            // sessionStorage.setItem("search_query", q);
+            // window.location.href = '/searchPage';
+            // fetch('/search')
+            // .then(response => response.json())
+            // .then(data => {
+            // if (data.url) {
+            // window.location.href = data.url;
+            // }
+            // });
+            // });
+
+
+        </script>
+    </body>
+
+</html>
